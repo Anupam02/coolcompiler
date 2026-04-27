@@ -16,6 +16,9 @@ TOKEN_TYPES = [
     ('SEMICOLON',r';'),            # Semicolon
     ('LET',      r'let'),          # let 
     ('MISMATCH', r'.'),            # Anything else (Error)
+    ('IF',       r'if\b'),         # \b ensures we don't match 'if' inside 'gift'
+    ('ELSE',     r'else\b'),
+    ('EQ',       r'=='),           # Comparison operator
 ]
 
 def lex(code):
